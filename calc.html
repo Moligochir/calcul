@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: rgb(220, 202, 202);
+    }
+    .container {
+      background-color: rgb(43, 43, 43);
+      border-radius: 10px;
+    }
+    .container1 {
+      gap: 0.5%;
+      padding: 0.5%;
+      display: flex;
+    }
+    button {
+      width: 59px;
+      font-size: 20px;
+      padding: 13px;
+      border-radius: 10px;
+      background-color: gray;
+      color: white;
+      border: none;
+    }
+    .header {
+      height: 70px;
+      font-size: 30px;
+      color: white;
+      display: flex;
+      align-items: end;
+      justify-content: end;
+      padding: 10px;
+    }
+  </style>
+  <body>
+    <script>
+      let number1, action;
+
+      const container = document.createElement("div");
+      container.classList.add("container");
+
+      const container1 = document.createElement("div");
+      container1.classList.add("container1");
+
+      const container2 = document.createElement("div");
+      container2.classList.add("container1");
+
+      const container3 = document.createElement("div");
+      container3.classList.add("container1");
+
+      const container4 = document.createElement("div");
+      container4.classList.add("container1");
+
+      const container5 = document.createElement("div");
+      container5.classList.add("container1");
+
+      const header = document.createElement("h1");
+      header.classList.add("header");
+
+      const button = document.createElement("button");
+      button.innerText = "AC";
+      function reset() {
+        header.innerText = "";
+      }
+      button.onclick = reset;
+      button.style.backgroundColor = "#423b3b";
+      const button1 = document.createElement("button");
+      button1.innerText = "+/-";
+      button1.style.backgroundColor = "#423b3b";
+      function plusorminus() {
+        number1 = header.innerText;
+        header.innerText = -header.innerText;
+      }
+      button1.onclick = plusorminus;
+      const button2 = document.createElement("button");
+      button2.innerText = "%";
+      button2.style.backgroundColor = "#423b3b";
+      function findpercent() {
+        number1 = header.innerText;
+        header.innerText = Number(header.innerText) / 100;
+      }
+      button2.onclick = findpercent;
+      const button3 = document.createElement("button");
+      button3.innerText = "/";
+      function printMyNumber3() {
+        number1 = header.innerText;
+        header.innerText = "";
+        action = "/";
+      }
+      button3.onclick = printMyNumber3;
+      button3.style.backgroundColor = "orange";
+      const button4 = document.createElement("button");
+      button4.innerText = "7";
+      function printMyNumber4() {
+        header.innerText += button4.innerText;
+      }
+      button4.onclick = printMyNumber4;
+      const button5 = document.createElement("button");
+      button5.innerText = "8";
+      function printMyNumber5() {
+        header.innerText += button5.innerText;
+      }
+      button5.onclick = printMyNumber5;
+      const button6 = document.createElement("button");
+      button6.innerText = "9";
+      function printMyNumber6() {
+        header.innerText += button6.innerText;
+      }
+      button6.onclick = printMyNumber6;
+      const button7 = document.createElement("button");
+      button7.innerText = "x";
+      button7.style.backgroundColor = "orange";
+      function printMyNumber7() {
+        number1 = header.innerText;
+        header.innerText = "";
+        action = "*";
+      }
+      button7.onclick = printMyNumber7;
+      const button8 = document.createElement("button");
+      button8.innerText = "4";
+      function printMyNumber8() {
+        header.innerText += button8.innerText;
+      }
+      button8.onclick = printMyNumber8;
+      const button9 = document.createElement("button");
+      button9.innerText = "5";
+      function printMyNumber9() {
+        header.innerText += button9.innerText;
+      }
+      button9.onclick = printMyNumber9;
+      const button10 = document.createElement("button");
+      button10.innerText += "6";
+      function printMyNumber10() {
+        header.innerText += button10.innerText;
+      }
+      button10.onclick = printMyNumber10;
+      const button11 = document.createElement("button");
+      button11.innerText = "-";
+      button11.style.backgroundColor = "orange";
+      function printMyNumber11() {
+        number1 = header.innerText;
+        header.innerText = "";
+        action = "-";
+      }
+      button11.onclick = printMyNumber11;
+      const button12 = document.createElement("button");
+      button12.innerText = "1";
+      function printMyNumber12() {
+        header.innerText += button12.innerText;
+      }
+      button12.onclick = printMyNumber12;
+      const button13 = document.createElement("button");
+      button13.innerText = "2";
+      function printMyNumber13() {
+        header.innerText += button13.innerText;
+      }
+      button13.onclick = printMyNumber13;
+      const button14 = document.createElement("button");
+      button14.innerText = "3";
+      function printMyNumber14() {
+        header.innerText += button14.innerText;
+      }
+      button14.onclick = printMyNumber14;
+      const button15 = document.createElement("button");
+      button15.innerText = "+";
+      button15.style.backgroundColor = "orange";
+      function printMyNumber15() {
+        number1 = header.innerText;
+        header.innerText = "";
+        action = "+";
+      }
+      // console.log(number1);
+      button15.onclick = printMyNumber15;
+      const button16 = document.createElement("button");
+      button16.innerText = "0";
+      function printMyNumber16() {
+        header.innerText += button16.innerText;
+      }
+      button16.onclick = printMyNumber16;
+      const button17 = document.createElement("button");
+      button17.innerText = "00";
+      function printMyNumber17() {
+        header.innerText += button17.innerText;
+      }
+      button17.onclick = printMyNumber17;
+      const button18 = document.createElement("button");
+      button18.innerText = ".";
+      function printMyNumber18() {
+        header.innerText += button18.innerText;
+      }
+      button18.onclick = printMyNumber18;
+      const button19 = document.createElement("button");
+      button19.innerText = "=";
+      button19.style.backgroundColor = "orange";
+
+      function equal() {
+        if (action == "+") {
+          let result = Number(number1) + Number(header.innerText);
+          header.innerText = result;
+        }
+        if (action == "-") {
+          let result = Number(number1) - Number(header.innerText);
+          header.innerText = result;
+        }
+        if (action == "*") {
+          let result = Number(number1) * Number(header.innerText);
+          header.innerText = result;
+        }
+        if (action == "/") {
+          let result = Number(number1) / Number(header.innerText);
+          header.innerText = result;
+        }
+      }
+
+      button19.onclick = equal;
+
+      container.appendChild(header);
+      container.appendChild(container1);
+      container.appendChild(container2);
+      container.appendChild(container3);
+      container.appendChild(container4);
+      container.appendChild(container5);
+
+      container1.appendChild(button);
+      container1.appendChild(button1);
+      container1.appendChild(button2);
+      container1.appendChild(button3);
+      container2.appendChild(button4);
+      container2.appendChild(button5);
+      container2.appendChild(button6);
+      container2.appendChild(button7);
+      container3.appendChild(button8);
+      container3.appendChild(button9);
+      container3.appendChild(button10);
+      container3.appendChild(button11);
+      container4.appendChild(button12);
+      container4.appendChild(button13);
+      container4.appendChild(button14);
+      container4.appendChild(button15);
+      container5.appendChild(button16);
+      container5.appendChild(button17);
+      container5.appendChild(button18);
+      container5.appendChild(button19);
+
+      document.body.appendChild(container);
+    </script>
+  </body>
+</html>
